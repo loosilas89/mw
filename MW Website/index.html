@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison — Design you can see. Engineering you can trust.</title>
+  <link rel="stylesheet" href="https://use.typekit.net/wog3vwu.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#231c21',
+            cream: '#FAFAF8',
+          },
+          fontFamily: {
+            display: ['bicyclette', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300" style="background: transparent;">
+    <div class="max-w-screen-xl mx-auto px-8 py-5 flex items-center justify-between">
+      <img id="nav-logo" src="assets/logo2.svg" alt="Maison" style="height:28px; width:auto;" />
+      <div class="flex items-center gap-8">
+        <a href="#how-it-works" class="cta-link" style="color:#FAFAF8; text-decoration:none; font-size:0.78rem; letter-spacing:0.12em;">Process</a>
+        <a href="#social-proof" class="cta-link" style="color:#FAFAF8; text-decoration:none; font-size:0.78rem; letter-spacing:0.12em;">Work</a>
+        <a href="#lead-capture" class="cta-link" style="color:#FAFAF8; font-size:0.78rem; letter-spacing:0.12em;">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- section: hero -->
+  <section class="min-h-screen flex flex-col justify-between pt-28 pb-0 px-8 overflow-hidden" style="background-color:#231c21;">
+    <div class="max-w-screen-xl mx-auto w-full flex-1 flex flex-col justify-center">
+
+      <!-- H1 -->
+      <h1 style="font-size: clamp(3rem, 7.5vw, 7rem); line-height: 1.05; letter-spacing: -0.02em; color: #FAFAF8; max-width: 900px; font-weight: 100;" class="mb-10 text-reveal">
+        Your workplace should work as hard as your team&nbsp;does.
+      </h1>
+
+      <!-- Bottom row -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-t pt-8 mt-auto" style="border-color: rgba(245,240,232,0.2);">
+
+        <!-- Tagline -->
+        <div class="md:col-span-1">
+          <p class="section-label mb-2" style="color: rgba(245,240,232,0.5);">Tagline</p>
+          <p style="color: #FAFAF8; font-family: 'bicyclette', sans-serif; font-weight:100; font-size:0.95rem; letter-spacing:0.04em;">Design you can see.<br/>Engineering you can trust.</p>
+        </div>
+
+        <!-- Body -->
+        <div class="md:col-span-2">
+          <p style="color: rgba(245,240,232,0.75); font-size: 0.95rem; line-height:1.7;">
+            Maison helps SME founders create workspaces that attract talent, signal culture, and get built without surprises — on time, on budget, and without leaving you to figure it out alone.
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="md:col-span-1 flex flex-col justify-end">
+          <a href="#lead-capture" class="cta-link" style="color: #FAFAF8;">Tell us about your space →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="max-w-screen-xl mx-auto w-full mt-12">
+      <img
+        src="images/hero.jpg"
+        alt="Maison — workspace interior"
+        class="w-full object-cover"
+        style="height: clamp(260px, 40vw, 520px); object-position: center;"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <!-- section: pain-agitation -->
+  <section class="bg-cream py-28 px-8">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Section label -->
+      <div class="md:col-span-1">
+      </div>
+
+      <!-- Content -->
+      <div class="md:col-span-3">
+        <h2 style="font-size: clamp(2rem, 4.5vw, 4rem); line-height: 1.1; letter-spacing: -0.01em; color: #231c21; margin-bottom: 1rem; font-weight: 100;" class="text-reveal">
+          Most renovations don't fail at the design stage.
+        </h2>
+        <h3 style="font-size: clamp(1.2rem, 2.5vw, 2rem); font-weight:100; color: rgba(35,28,33,0.55); margin-bottom: 2.5rem; letter-spacing:-0.01em;">
+          They fail when no one's watching the details.
+        </h3>
+        <div style="max-width: 620px; font-size: 1rem; line-height: 1.8; color: rgba(35,28,33,0.8);">
+          <p class="mb-5">You hired a designer for their portfolio. But somewhere between the mood board and move-in day, things went sideways.</p>
+          <p class="mb-5">The contractor quoted one number and invoiced another. Decisions came up mid-build that no one prepared you for. The timeline slipped — and when you needed answers, no one picked up the phone.</p>
+          <p class="mb-5">You're not just renovating a space. You're managing a process you've never done before, with people you're not sure you can trust, on a budget you can't afford to blow.</p>
+          <p style="font-family:'bicyclette',sans-serif; font-weight:100; font-size:1.1rem; color:#231c21;">That's not a design problem. That's a project management problem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section: solution -->
+  <section class="py-28 px-8 border-t divider" style="background-color:#E8E3DD;">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <p class="section-label mb-8" style="color:rgba(35,28,33,0.42);">What Makes Us Different</p>
+      <div class="mx-auto" style="max-width: 980px;">
+        <h2 class="impact-title mb-8 text-reveal">
+          That's exactly why Maison exists.
+        </h2>
+        <div class="mx-auto" style="max-width: 760px; font-size: 1.05rem; line-height: 1.8; color: rgba(35,28,33,0.8); margin-bottom: 2.2rem;">
+          <p class="mb-5">We're not a traditional design firm. We're your renovation partner — from first brief to final walkthrough.</p>
+          <p style="font-family:'bicyclette',sans-serif; font-weight:100; font-size:1.35rem; color:#231c21; line-height:1.8;">
+            Creative direction.<br/>
+            Rigorous project management.<br/>
+            Full accountability.
+          </p>
+          <p class="mt-5">You focus on running your business. We make sure your space gets built right.</p>
+        </div>
+        <a href="#how-it-works" class="cta-link" style="color:#231c21;">See how we work →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- section: founder-differentiator -->
+  <section class="bg-cream py-28 px-8 border-t divider">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+      <!-- Copy -->
+      <div>
+        <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; letter-spacing: -0.01em; color: #231c21; margin-bottom: 2rem; font-weight: 100;" class="text-reveal">
+          Engineering-backed.<br/>Design-led.
+        </h2>
+        <div style="font-size: 1rem; line-height: 1.8; color: rgba(35,28,33,0.8); margin-bottom: 2.5rem;">
+          <p class="mb-4">Maison is led by Michelle, who started her career in engineering — not on a mood board.</p>
+          <p class="mb-4">That means we read contractor proposals line by line. We flag shortcuts before they become your problem. We track the budget in real time, not at the end when it's too late.</p>
+          <p>Our clients don't just get a design. They get someone who understands the full picture — and won't let the build compromise the vision.</p>
+        </div>
+        <p style="font-family:'bicyclette',sans-serif; font-weight:100; font-size:1rem; letter-spacing:0.04em; color:rgba(35,28,33,0.5);">
+          Design you can see. Engineering you can trust.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <img
+          src="images/founder.jpg"
+          alt="Maison workspace"
+          class="w-full object-cover"
+          style="height: 480px; object-position: center;"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- section: how-it-works -->
+  <section id="how-it-works" class="bg-cream py-28 px-8 border-t divider">
+    <div class="max-w-screen-xl mx-auto">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        <div class="md:col-span-1">
+        </div>
+        <div class="md:col-span-3">
+          <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; letter-spacing: -0.01em; color: #231c21; font-weight: 100;" class="text-reveal">
+            Simple process. No surprises.
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t divider">
+
+        <!-- Step 1 -->
+        <div class="py-10 pr-10 border-b md:border-b-0 md:border-r divider">
+          <p style="font-family:'bicyclette',sans-serif; font-weight:100; font-size:3rem; color:rgba(35,28,33,0.15); line-height:1; margin-bottom:1.5rem;">01</p>
+          <h3 style="font-size:1.1rem; font-weight:100; color:#231c21; margin-bottom:1rem; letter-spacing:-0.01em;">Understand</h3>
+          <p style="font-size:0.9rem; line-height:1.75; color:rgba(35,28,33,0.7);">We start with your business, your team, and your budget — not your aesthetic preferences. Before any design work begins, we map out what the space needs to do and what it realistically costs to get there.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="py-10 px-10 border-b md:border-b-0 md:border-r divider">
+          <p style="font-family:'bicyclette',sans-serif; font-weight:100; font-size:3rem; color:rgba(35,28,33,0.15); line-height:1; margin-bottom:1.5rem;">02</p>
+          <h3 style="font-size:1.1rem; font-weight:100; color:#231c21; margin-bottom:1rem; letter-spacing:-0.01em;">Design + Plan</h3>
+          <p style="font-size:0.9rem; line-height:1.75; color:rgba(35,28,33,0.7);">You get a creative direction and a project plan at the same time. Every design decision comes with a cost implication. No mood boards without numbers.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="py-10 pl-10">
+          <p style="font-family:'bicyclette',sans-serif; font-weight:100; font-size:3rem; color:rgba(35,28,33,0.15); line-height:1; margin-bottom:1.5rem;">03</p>
+          <h3 style="font-size:1.1rem; font-weight:100; color:#231c21; margin-bottom:1rem; letter-spacing:-0.01em;">Build + Deliver</h3>
+          <p style="font-size:0.9rem; line-height:1.75; color:rgba(35,28,33,0.7);">We manage the contractors, track the budget, and stay on site so you don't have to. You get updates, not surprises — and a space that matches what we designed on day one.</p>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <a href="#lead-capture" class="cta-link" style="color:#231c21;">Start with a conversation →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- section: benefits -->
+  <section class="bg-cream py-28 px-8 border-t divider">
+    <div class="max-w-screen-xl mx-auto">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        <div class="md:col-span-1">
+        </div>
+        <div class="md:col-span-3">
+          <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; letter-spacing: -0.01em; color: #231c21; font-weight: 100;" class="text-reveal">
+            What you get when you work with Maison.
+          </h2>
+        </div>
+      </div>
+
+      <div class="image-strip mb-14">
+        <div class="image-card md:col-span-4" style="grid-column: span 4 / span 4;">
+          <img src="images/benefits-1.jpg" alt="Workspace design detail" style="object-position: center 30%;" loading="lazy" />
+        </div>
+        <div class="image-card md:col-span-5" style="grid-column: span 5 / span 5;">
+          <img src="images/benefits-2.jpg" alt="Workspace project supervision" style="object-position: center 58%;" loading="lazy" />
+        </div>
+        <div class="image-card md:col-span-3" style="grid-column: span 3 / span 3;">
+          <img src="images/benefits-3.jpg" alt="Completed office interior" style="object-position: center 74%;" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="border-t divider">
+
+        <!-- Benefit 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-10 border-b divider">
+          <div class="md:col-span-1">
+            <h3 style="font-size:1rem; font-weight:100; color:#231c21; letter-spacing:-0.01em;">Full cost transparency</h3>
+          </div>
+          <div class="md:col-span-3">
+            <p style="font-size:0.95rem; line-height:1.75; color:rgba(35,28,33,0.75); max-width:580px;">No surprise invoices. Before any work begins, you'll know exactly where your budget is going — and where it isn't. We help you allocate spend for maximum impact, not maximum markup.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-10 border-b divider">
+          <div class="md:col-span-1">
+            <h3 style="font-size:1rem; font-weight:100; color:#231c21; letter-spacing:-0.01em;">A partner, not a vendor</h3>
+          </div>
+          <div class="md:col-span-3">
+            <p style="font-size:0.95rem; line-height:1.75; color:rgba(35,28,33,0.75); max-width:580px;">We don't hand off and disappear. From brief to final walkthrough, you have one point of contact who understands both the creative vision and the construction process.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
+          <div class="md:col-span-1">
+            <h3 style="font-size:1rem; font-weight:100; color:#231c21; letter-spacing:-0.01em;">A space your team actually wants to come to</h3>
+          </div>
+          <div class="md:col-span-3">
+            <p style="font-size:0.95rem; line-height:1.75; color:rgba(35,28,33,0.75); max-width:580px;">Great workplaces don't just look good. They attract talent, signal culture, and make the day-to-day better. We build for that outcome — not just the photoshoot.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- section: social-proof -->
+  <section id="social-proof" class="bg-cream py-28 px-8 border-t divider">
+    <div class="max-w-screen-xl mx-auto">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        <div class="md:col-span-1">
+        </div>
+        <div class="md:col-span-3">
+          <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; letter-spacing: -0.01em; color: #231c21; font-weight: 100;" class="text-reveal">
+            Trusted by founders who take their workplace seriously.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Logo strip -->
+      <div class="flex flex-wrap gap-8 items-center mb-20 border-t border-b py-10 divider">
+        <div class="logo-tile">ALPHA</div>
+        <div class="logo-tile">KITE</div>
+        <div class="logo-tile">NOVA</div>
+        <div class="logo-tile">VERDE</div>
+        <div class="logo-tile">ATLAS</div>
+        <div class="logo-tile">ORBIT</div>
+      </div>
+
+      <div class="image-strip mb-16">
+        <div class="image-card md:col-span-7" style="grid-column: span 7 / span 7; min-height: 280px;">
+          <img src="images/work-1.jpg" alt="Completed Maison client office" style="object-position: center 50%;" loading="lazy" />
+        </div>
+        <div class="image-card md:col-span-5" style="grid-column: span 5 / span 5; min-height: 280px;">
+          <img src="images/work-2.jpg" alt="Team collaboration in renovated workspace" style="object-position: center 18%;" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t divider">
+
+        <div class="py-10 pr-10 border-b md:border-b-0 md:border-r divider">
+          <p style="font-size:0.95rem; line-height:1.8; color:rgba(35,28,33,0.8); margin-bottom:1.5rem; font-style:italic;">"We'd been burned by a contractor before, so we were cautious. Maison was the first firm that walked us through every cost before we signed anything. No surprises, no shortcuts — just exactly what was promised."</p>
+          <p class="section-label" style="color:rgba(35,28,33,0.5);">— Sarah K., Founder, [Clinic Name]</p>
+        </div>
+
+        <div class="py-10 px-10 border-b md:border-b-0 md:border-r divider">
+          <p style="font-size:0.95rem; line-height:1.8; color:rgba(35,28,33,0.8); margin-bottom:1.5rem; font-style:italic;">"What stood out wasn't the design — it was how in control we felt throughout the entire process. Michelle flagged issues we never would have caught ourselves. Our team moved in on time and under budget."</p>
+          <p class="section-label" style="color:rgba(35,28,33,0.5);">— Ahmad R., CEO, [Tech Startup]</p>
+        </div>
+
+        <div class="py-10 pl-10">
+          <p style="font-size:0.95rem; line-height:1.8; color:rgba(35,28,33,0.8); margin-bottom:1.5rem; font-style:italic;">"Our office used to be an afterthought. Now it's the first thing candidates comment on when they come in for interviews. The space genuinely changed how our team feels about coming to work."</p>
+          <p class="section-label" style="color:rgba(35,28,33,0.5);">— Layla M., Managing Director, [SME Name]</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- section: lead-capture -->
+  <section id="lead-capture" class="py-32 px-8" style="background-color:#231c21;">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start" style="padding-top: 8rem;">
+
+      <!-- Heading -->
+      <div>
+        <h2 style="font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1.05; letter-spacing: -0.02em; color: #FAFAF8; margin-bottom: 1.5rem; font-weight: 100;">
+          Tell us about your space.
+        </h2>
+        <p style="font-size: 1rem; line-height: 1.75; color: rgba(245,240,232,0.65); max-width: 420px;">
+          No pitch. No pressure. Just a straightforward conversation about what you need, what it realistically costs, and whether we're the right fit.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form style="padding-top: 4rem;">
+        <div class="mb-8">
+          <input type="text" placeholder="Name" class="form-input" />
+        </div>
+        <div class="mb-8">
+          <input type="text" placeholder="Company" class="form-input" />
+        </div>
+        <div class="mb-8">
+          <input type="email" placeholder="Email" class="form-input" />
+        </div>
+        <div class="mb-10">
+          <textarea placeholder="Tell us about your project" rows="3" class="form-input" style="resize:none;"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Let's Talk →</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- section: footer -->
+  <footer style="background-color: #231c21; position: relative; overflow: hidden; padding: 4rem 2rem 2rem;">
+
+    <div class="max-w-screen-xl mx-auto relative z-10">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 border-b pb-10 mb-6" style="border-color: rgba(245,240,232,0.12);">
+
+        <p style="font-family:'bicyclette',sans-serif; font-weight:100; font-size:0.9rem; letter-spacing:0.06em; color:rgba(245,240,232,0.5);">
+          Design you can see. Engineering you can trust.
+        </p>
+
+        <!-- Social links -->
+        <div class="flex gap-6">
+          <a href="#" class="cta-link" style="color:rgba(245,240,232,0.6); text-decoration:none; font-size:0.75rem;">Facebook</a>
+          <a href="#" class="cta-link" style="color:rgba(245,240,232,0.6); text-decoration:none; font-size:0.75rem;">Instagram</a>
+          <a href="#" class="cta-link" style="color:rgba(245,240,232,0.6); text-decoration:none; font-size:0.75rem;">LinkedIn</a>
+        </div>
+      </div>
+
+      <p style="font-size:0.75rem; color:rgba(245,240,232,0.3); letter-spacing:0.06em;">© 2026 Maison. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
